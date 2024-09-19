@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+try:
+    from NASA_Project_Backend.local_settings import NASA_API_KEY
+except ImportError:
+    pass  # No local_settings file
+
 
 # Application definition
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fetch_Nasa_Data',
 ]
 
 MIDDLEWARE = [
