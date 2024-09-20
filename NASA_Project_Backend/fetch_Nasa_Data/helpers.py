@@ -42,6 +42,3 @@ def save_data_to_database(response_dictionary):
         new_obj.save()
     else:
         print("Failed to fetch data")
-
-data = fetchdata()
-save_data_to_database(data)
